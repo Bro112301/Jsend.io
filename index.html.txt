@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Message App</title>
+</head>
+<body>
+    <div id="app">
+        <div id="sidebar">
+            <h2>User List</h2>
+            <ul id="users"></ul>
+        </div>
+        <div id="main">
+            <div id="chat">
+                <h2>Chat</h2>
+                <ul id="messages"></ul>
+                <div id="messageInputContainer">
+                    <input type="text" id="messageInput" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+            <div id="direct-message">
+                <h2>Direct Message</h2>
+                <select id="recipientSelect"></select>
+                <div id="directMessageInputContainer">
+                    <input type="text" id="directMessageInput" placeholder="Type your message...">
+                    <button onclick="sendDirectMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
