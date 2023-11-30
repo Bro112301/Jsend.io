@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOU'VE BEEN TROLLED</title>
+  <style>
+    #video-container {
+      position: relative;
+      width: 560px;
+      height: 315px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .fullscreen-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      cursor: pointer;
+    }
+
+    #youtube-video {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="video-container">
+    <iframe id="youtube-video" src="https://youtu.be/dQw4w9WgXcQ?si=FZRSI1JaA-aMjTyB" frameborder="0" allowfullscreen></iframe>
+    <button class="fullscreen-button">Fullscreen</button>
+  </div>
+
+  <script>
+    var videoContainer = document.getElementById('video-container');
+    var fullscreenButton = document.querySelector('.fullscreen-button');
+    var youtubeVideo = document.getElementById('youtube-video');
+
+    fullscreenButton.addEventListener('click', function() {
+      if (youtubeVideo.requestFullscreen) {
+        youtubeVideo.requestFullscreen();
+      } else if (youtubeVideo.webkitRequestFullscreen) {
+        youtubeVideo.webkitRequestFullscreen();
+      } else if (youtubeVideo.mozRequestFullscreen) {
+        youtubeVideo.mozRequestFullscreen();
+      } else {
+        alert('Fullscreen mode not supported');
+      }
+    });
+  </script>
+</body>
+</html>
