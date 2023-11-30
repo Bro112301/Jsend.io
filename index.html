@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=oa_27_25DfH2OWwm&amp;controls=0" title="L BOZO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <html>
   <body>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
@@ -24,7 +27,7 @@
             'playsinline': 1
           },
           events: {
-            'onReady': event.target.playVideo,
+            'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
           }
         });
