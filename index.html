@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YOU'VE BEEN TROLLED</title>
+  <title>get wrecked</title>
   <style>
     #video-container {
       position: relative;
@@ -21,6 +21,7 @@
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
       cursor: pointer;
+      display: none; /* Hide the fullscreen button initially */
     }
 
     #youtube-video {
@@ -31,7 +32,7 @@
 </head>
 <body>
   <div id="video-container">
-    <iframe id="youtube-video" src="https://youtu.be/dQw4w9WgXcQ?si=FZRSI1JaA-aMjTyB" frameborder="0" allowfullscreen></iframe>
+    <iframe id="youtube-video" src="https://youtu.be/dQw4w9WgXcQ?si=eOVfHKYLd_MsBaLQ" frameborder="0" allowfullscreen></iframe>
     <button class="fullscreen-button">Fullscreen</button>
   </div>
 
@@ -40,13 +41,16 @@
     var fullscreenButton = document.querySelector('.fullscreen-button');
     var youtubeVideo = document.getElementById('youtube-video');
 
+    // Automatically initiate fullscreen mode on page load
+    youtubeVideo.requestFullscreen();
+
     fullscreenButton.addEventListener('click', function() {
-      if (youtubeVideo.requestFullscreen) {
-        youtubeVideo.requestFullscreen();
-      } else if (youtubeVideo.webkitRequestFullscreen) {
-        youtubeVideo.webkitRequestFullscreen();
-      } else if (youtubeVideo.mozRequestFullscreen) {
-        youtubeVideo.mozRequestFullscreen();
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
       } else {
         alert('Fullscreen mode not supported');
       }
