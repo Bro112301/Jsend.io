@@ -3,58 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>get wrecked</title>
+  <title>Fullscreen YouTube Video</title>
   <style>
-    #video-container {
-      position: relative;
-      width: 560px;
-      height: 315px;
-      margin: 0 auto;
-      overflow: hidden;
-    }
-
-    .fullscreen-button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      cursor: pointer;
-      display: none; /* Hide the fullscreen button initially */
-    }
-
-    #youtube-video {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-</head>
-<body>
-  <div id="video-container">
-    <iframe id="youtube-video" src="https://youtu.be/dQw4w9WgXcQ?si=eOVfHKYLd_MsBaLQ" frameborder="0" allowfullscreen></iframe>
-    <button class="fullscreen-button">Fullscreen</button>
-  </div>
-
-  <script>
-    var videoContainer = document.getElementById('video-container');
-    var fullscreenButton = document.querySelector('.fullscreen-button');
-    var youtubeVideo = document.getElementById('youtube-video');
-
-    // Automatically initiate fullscreen mode on page load
-    youtubeVideo.requestFullscreen();
-
-    fullscreenButton.addEventListener('click', function() {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else {
-        alert('Fullscreen mode not supported');
-      }
-    });
-  </script>
-</body>
-</html>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=oa_27_25DfH2OWwm&amp;controls=0" title="L BOZO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
