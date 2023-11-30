@@ -1,13 +1,13 @@
-let cookies = 0;
-let cookiesPerClick = 1;
+let jsend = 0;
+let jsendPerClick = 1;
 
-function clickCookie() {
-  cookies += cookiesPerClick;
-  updateCookieDisplay();
+function clickJsend() {
+  cookies += jsendsPerClick;
+  updatejsendDisplay();
 }
 
-function updateCookieDisplay() {
-  document.getElementById('cookie-count').textContent = cookies;
+function updatejsendDisplay() {
+  document.getElementById('jsend-count').textContent = cookies;
 }
 
 function purchaseUpgrade(upgradeId) {
@@ -39,7 +39,7 @@ let upgrades = {
     cost: 10,
     multiplier: 1.5,
     buy() {
-      cookiesPerClick *= this.multiplier;
+      jsendPerClick *= this.multiplier;
     }
   },
   grandma: {
@@ -47,15 +47,15 @@ let upgrades = {
     cost: 100,
     multiplier: 2,
     buy() {
-      cookiesPerClick *= this.multiplier;
+      jsendPerClick *= this.multiplier;
     }
   }
 };
 
-updateCookieDisplay();
+updatjsendDisplay();
 updateUpgradeDisplay();
 
-document.getElementById('cookie').addEventListener('click', clickCookie);
+document.getElementById('jsend').addEventListener('click', clickjsend);
 
 for (let upgradeId in upgrades) {
   document.getElementById('upgrade-' + upgradeId).addEventListener('click', () => purchaseUpgrade(upgradeId));
